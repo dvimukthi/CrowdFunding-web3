@@ -19,4 +19,6 @@ contract CrowdFunding {
     uint256 public numberofCampaigns = 0;
 
     function createCampaign() {}
+
+    function donateToCampaign() {}
 }
