@@ -21,4 +21,6 @@ contract CrowdFunding {
     function createCampaign() {}
 
     function donateToCampaign() {}
+
+    function getDonators() {}
 }
