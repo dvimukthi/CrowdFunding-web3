@@ -32,6 +32,18 @@ contract CrowdFunding {
             campaign.deadline < block.timestamp,
             "The deadline should be a date in the future."
         );
+
+        campaign.owner = _owner;
+        campaign.title = _title;
+        campaign.description = _description;
+        campaign.target = _target;
+        campaign.deadline = _deadline;
+        campaign.amountColected = 0;
+        campaign.image = _image;
+
+        numberofCampaigns++;
+
+        return numberofCampaigns - 1;
     }
 
     function donateToCampaign() {}
