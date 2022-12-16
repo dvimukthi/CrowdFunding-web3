@@ -7,7 +7,7 @@ contract CrowdFunding {
         string title;
         string description;
         uint256 target;
-        uint256 deadlin;
+        uint256 deadline;
         uint256 amountColected;
         string image;
         address[] donators;
@@ -27,6 +27,11 @@ contract CrowdFunding {
         string memory _image
     ) public returns (uint256) {
         Campaign storage campaign = campaigns[numberofCampaigns];
+
+        require(
+            campaign.deadline < block.timestamp,
+            "The deadline should be a date in the future."
+        );
     }
 
     function donateToCampaign() {}
